@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <!--调用静态方法-->
+        <import type="com.yeyue.learns.utils.StringFormatUtil" />
+
+        <variable
+            name="cate"
+            type="com.yeyue.learns.enity.movie.MovieCateGory" />
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentLinearLayout
+        android:id="@+id/ll_one_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvList"
+            android:layout_width="match_parent"
+            app:layout_heightPercent="40%w" />
+    </com.yeyue.library.widgets.percent.PercentLinearLayout>
+</layout>

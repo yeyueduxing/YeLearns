@@ -1,0 +1,136 @@
+
+首页
+	推荐
+	http://service.picasso.adesk.com/v3/homepage?limit=30&adult=false&did=869545024839585&first=1&order=hot
+		精选
+		http://service.picasso.adesk.com/v1/wallpaper/recommend?limit=6&adult=false&first=1
+	分类
+	http://service.picasso.adesk.com/v1/wallpaper/category?adult=false&first=1
+		最新
+		http://service.picasso.adesk.com/v1/wallpaper/category/4e4d610cdf714d2966000000/wallpaper?limit=30&adult=false&first=1&order=new
+		热门
+		http://service.picasso.adesk.com/v1/wallpaper/category/4e4d610cdf714d2966000000/wallpaper?limit=30&adult=false&first=1&order=hot
+		专辑
+		http://service.picasso.adesk.com/v1/wallpaper/category/4e4d610cdf714d2966000000/album?limit=10&adult=false&first=1&order=new
+	最新
+	http://service.picasso.adesk.com/v1/wallpaper/wallpaper?limit=30&adult=false&first=1&order=new
+	专辑
+	http://service.picasso.adesk.com/v1/wallpaper/album?limit=10&adult=false&first=1&order=new
+		专辑详情
+		http://service.picasso.adesk.com/v1/wallpaper/album/59f9443fe7bce729500bc9fe/wallpaper?limit=30&adult=false&first=1&order=new
+	壁纸详情
+		http://service.picasso.adesk.com/v2/wallpaper/wallpaper/59f3082ae7bce729d564ff6f/comment
+搜索
+	热门搜索
+	http://service.picasso.adesk.com/v1/push/keyword?versionCode=185&channel=xiaomi&first=1&adult=false
+	换一批
+	http://service.picasso.adesk.com/v1/push/keyword?versionCode=185&channel=xiaomi&first=0&adult=false
+
+	关键词搜索
+	全部
+	http://so.picasso.adesk.com/v1/search/all/resource/%E7%BE%8E%E5%A5%B3?limit=30&channel=xiaomi&adult=false&first=1
+	竖屏
+	http://so.picasso.adesk.com/v1/search/vertical/resource/巨乳?limit=30&channel=xiaomi&adult=false&first=1
+	壁纸
+		http://so.picasso.adesk.com/v1/search/wallpaper/resource/%E5%B7%A8%E4%B9%B3?limit=30&channel=xiaomi&adult=false&first=1
+	铃声
+		http://so.picasso.adesk.com/v1/search/ring/resource/%E5%B7%A8%E4%B9%B3?limit=30&channel=xiaomi&adult=false&first=1
+	动态壁纸
+		http://so.picasso.adesk.com/v1/search/live/resource/%E7%BE%8E%E5%A5%B3?limit=30&channel=xiaomi&skip=30&adult=false&first=0
+	锁屏
+		http://so.picasso.adesk.com/v1/search/lock/resource/%E7%BE%8E%E5%A5%B3?limit=30&channel=xiaomi&skip=30&adult=false&first=0
+
+竖屏
+	热门
+	http://service.picasso.adesk.com/v1/vertical/vertical?limit=30&adult=false&first=1&order=hot
+	最新
+	http://service.picasso.adesk.com/v1/vertical/vertical?limit=30&adult=false&first=1&order=new
+	分类
+	http://service.picasso.adesk.com/v1/vertical/category?adult=false&first=1
+		最新
+		http://service.picasso.adesk.com/v1/vertical/category/4e4d610cdf714d2966000000/vertical?limit=30&adult=false&first=1&order=new
+		热门
+		http://service.picasso.adesk.com/v1/vertical/category/4e4d610cdf714d2966000000/vertical?limit=30&adult=false&first=1&order=hot
+	壁纸详情
+	http://service.picasso.adesk.com/v2/vertical/vertical/5820365d174cf12302d38bac/comment
+
+视频壁纸
+	推荐
+	https://service.videowp.adesk.com/v1/videowp/featured?limit=30&adult=false&first=1&order=hot
+	娱乐
+	https://service.videowp.adesk.com/v1/videowp/category/59b25abbe7bce76bc834198a?limit=30&adult=false&first=1&order=new
+	最新
+	https://service.videowp.adesk.com/v1/videowp/videowp?limit=30&adult=false&first=1&order=new
+	热门
+	https://service.videowp.adesk.com/v1/videowp/videowp?limit=30&adult=false&first=1&order=hot
+	分类
+	https://service.videowp.adesk.com/v1/videowp/category?adult=false&first=1
+		最新
+		https://service.videowp.adesk.com/v1/videowp/category/5930e065e7bce72ce01371b1?limit=30&adult=false&first=1&order=new
+		热门
+		https://service.videowp.adesk.com/v1/videowp/category/5930e065e7bce72ce01371b1?limit=30&adult=false&first=1&order=hot
+
+发现
+	http://m.adesk.com/v1/explore/set?limit=30&skip=0
+
+
+用户信息
+	http://service.picasso.adesk.com/v1/user/5965cd0be7bce7312ef79fbf?adult=false
+	壁纸
+	http://service.picasso.adesk.com/v1/user/5965cd0be7bce7312ef79fbf/wallpaper?limit=30&adult=false&first=1&order=new
+	竖屏壁纸
+	http://service.picasso.adesk.com/v1/user/5965cd0be7bce7312ef79fbf/vertical?limit=30&adult=false&first=1&order=new
+	专辑
+	http://service.picasso.adesk.com/v1/user/5965cd0be7bce7312ef79fbf/album?uid=&limit=30&adult=false&first=1&order=new
+	竖屏作品
+	http://service.picasso.adesk.com/v1/user/5965cd0be7bce7312ef79fbf/vertical?action=upload&limit=30&adult=false&first=1&order=new
+	作品
+	http://service.picasso.adesk.com/v1/user/5965cd0be7bce7312ef79fbf/wallpaper?action=upload&limit=30&adult=false&first=1&order=new
+	动态壁纸
+	http://service.picasso.adesk.com/v1/user/5965cd0be7bce7312ef79fbf/live?limit=30&adult=false&first=1&order=new
+	锁屏壁纸
+	http://service.picasso.adesk.com/v1/user/5965cd0be7bce7312ef79fbf/lock?limit=30&adult=false&first=1&order=new
+	铃声
+	http://service.picasso.adesk.com/v1/user/5965cd0be7bce7312ef79fbf/ring?limit=30&adult=false&first=1&order=new
+
+
+动态壁纸
+	最新
+	http://service.picasso.adesk.com/v1/live/live?limit=30&adult=false&first=1&order=new
+	分类
+	http://service.picasso.adesk.com/v1/live/category?adult=false&first=1
+	热门
+	http://service.picasso.adesk.com/v1/live/live?limit=30&adult=false&first=1&order=hot
+	分类详情
+	http://service.picasso.adesk.com/v1/live/category/5281dde048d5b94fb0de5354/live?limit=30&adult=false&first=1&order=new
+头像
+	推荐
+	http://service.picasso.adesk.com/v1/avatar/recommend?limit=6&adult=false&first=1
+	最新
+	http://service.picasso.adesk.com/v1/avatar/avatar?limit=30&adult=false&first=1&order=hot
+	分类详情
+	http://service.picasso.adesk.com/v1/avatar/avatar?cid=55f7d52969401b227e98de4f&limit=30&adult=false&first=1&order=hot
+
+美女
+	竖屏
+	http://service.picasso.adesk.com/v1/vertical/category/4e4d610cdf714d2966000000/vertical?limit=30&adult=false&first=1&order=new
+	横屏
+	http://service.picasso.adesk.com/v1/wallpaper/category/4e4d610cdf714d2966000000/wallpaper?limit=30&adult=false&first=1&order=new
+	纯净
+	http://service.picasso.adesk.com/v1/wallpaper/album/546c9c1469401b234606da56/wallpaper?limit=30&adult=false&first=1&order=new
+	气质
+	http://service.picasso.adesk.com/v1/wallpaper/album/5693671669401b7a39308888/wallpaper?limit=30&adult=false&first=1&order=new
+	香车
+	http://service.picasso.adesk.com/v1/wallpaper/album/4f688d020569797d5e000058/wallpaper?limit=30&adult=false&first=1&order=new
+	俏皮
+	http://service.picasso.adesk.com/v1/wallpaper/album/55d4284d69401b03a4bb5dab/wallpaper?limit=30&adult=false&first=1&order=new
+	侧颜
+	http://service.picasso.adesk.com/v1/wallpaper/album/552cee2469401b5a9162f492/wallpaper?limit=30&adult=false&first=1&order=new
+
+动漫
+	竖屏
+	http://service.picasso.adesk.com/v1/vertical/category/4e4d610cdf714d2966000003/vertical?limit=30&adult=false&first=1&order=new
+	横屏
+	http://service.picasso.adesk.com/v1/wallpaper/category/4e4d610cdf714d2966000003/wallpaper?limit=30&adult=false&first=1&order=new
+	竖屏
+	http://service.picasso.adesk.com/v1/wallpaper/album/5790848469401b71e3554e0f/wallpaper?limit=30&adult=false&first=1&order=new

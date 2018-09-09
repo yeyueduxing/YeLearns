@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+        <variable
+            name="gankdata"
+            type="com.yeyue.learns.enity.gank.GankData"/>
+        <import type="com.yeyue.learns.utils.BindingUtils"/>
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/transparent"
+        android:onClick="@{(view) -> BindingUtils.openGankFuli(view,gankdata)}">
+
+        <com.yeyue.library.widgets.percent.PercentLinearLayout
+            android:id="@+id/ll_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--全部标签时显示福利图-->
+            <ImageView
+                android:id="@+id/iv_all_welfare"
+                android:layout_width="match_parent"
+                app:layout_heightPercent="150%w"
+                app:layout_marginPercent="2%w"
+                android:scaleType="centerCrop"
+                android:showImgBg="@{gankdata.url}"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="6dp"
+                android:background="@color/transparent" />
+
+            <!--若不使用CardView则使用此分割线-->
+            <!--android:background="@color/colorLineItem"-->
+        </com.yeyue.library.widgets.percent.PercentLinearLayout>
+    </android.support.v7.widget.CardView>
+
+</layout>

@@ -1,0 +1,26 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="live"
+            type="com.yeyue.learns.enity.bizhi.LiveBean"/>
+        <import type="com.yeyue.learns.utils.BindingUtils"/>
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:onClick="@{(view) -> BindingUtils.oepnLiveDetail(view,live)}"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            app:layout_heightPercent="150%w"
+            app:layout_marginPercent="2%w"
+            android:scaleType="fitCenter"
+            android:showImgBg="@{live.imgid}"
+        />
+    </com.yeyue.library.widgets.percent.PercentLinearLayout>
+</layout>

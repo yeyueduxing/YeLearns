@@ -1,0 +1,42 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.yeyue.learns.enity.bizhi.UserBean" />
+
+        <variable
+            name="comment"
+            type="com.yeyue.learns.enity.bizhi.CommentBean" />
+
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentLinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+        <com.yeyue.library.widgets.percent.PercentLinearLayout
+            style="@style/AppMargin"
+            android:orientation="vertical">
+            <include layout="@layout/item_bizhi_head_wrap_view"
+                app:user="@{user}"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="13%w"
+                app:layout_marginRightPercent="13%w"
+                app:layout_marginTopPercent="5%w"
+                app:layout_marginBottomPercent="5%w"
+                android:showComment="@{comment}"
+                android:textColor="@color/color_Main_Body"
+                app:layout_textSizePercent="3.5%w"
+                tools:text="回复" />
+        </com.yeyue.library.widgets.percent.PercentLinearLayout>
+
+    </com.yeyue.library.widgets.percent.PercentLinearLayout>
+</layout>

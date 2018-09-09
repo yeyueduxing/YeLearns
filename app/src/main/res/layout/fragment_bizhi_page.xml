@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yeyue.library.widgets.percent.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ye_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    >
+    <com.yeyue.library.widgets.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        app:layout_heightPercent="10%w">
+        <android.support.design.widget.TabLayout
+            android:id="@+id/ye_tab_layout"
+            style="@style/YeTablayoutStyle"
+            android:layout_centerHorizontal="true"
+            app:layout_widthPercent="60%w"/>
+        <ImageView
+            android:id="@+id/ivSearch"
+            app:layout_widthPercent="8%w"
+            app:layout_heightPercent="8%w"
+            app:layout_paddingPercent="1%w"
+            android:src="@drawable/ic_menu_search"
+            app:layout_marginRightPercent="5%w"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+    </com.yeyue.library.widgets.percent.PercentRelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/ye_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</com.yeyue.library.widgets.percent.PercentLinearLayout>

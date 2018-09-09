@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    useLibrary 'org.apache.http.legacy'
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        applicationId "com.yeyue.yelearns"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
+        multiDexEnabled true
+    }
+    buildTypes {
+
+        debug {
+            buildConfigField "boolean", "USE_LEAKCANARY", "false"
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "true"
+            buildConfigField "String", "BUGLY_APPID", '"55d4cd3bb7"'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            buildConfigField "boolean", "USE_LEAKCANARY", "true"
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            buildConfigField "String", "BUGLY_APPID", '"55d4cd3bb7"'
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets{
+        main.java.srcDirs = ['src/main/java','src/main/java-gen']
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        abortOnError false
+    }
+    greendao {
+        schemaVersion 1
+        daoPackage 'com.yeyue.bizhi'
+        targetGenDir 'src/main/java-gen'
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //support
+    implementation(rootProject.ext.dependencies["cardview-v7"]) {
+        exclude module: 'support-annotations'
+    }
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+
+    //view
+    annotationProcessor(rootProject.ext.dependencies["butterknife-compiler"]) {
+        exclude module: 'support-annotations'
+    }
+    api  project(':yeyue')
+    /*html遍历解析工具*/
+    api  'org.jsoup:jsoup:1.9.2'
+    /*日历控件 https://github.com/huanghaibin-dev/CalendarView*/
+    api('com.haibin:calendarview:3.2.2') {
+           exclude module: 'support-recyclerview'
+     }
+    api  'org.greenrobot:greendao:3.2.2' // add library
+
+    /*底部弹窗 https://github.com/soarcn/BottomSheet */
+    api('com.cocosw:bottomsheet:1.+@aar') {
+        exclude module: 'support-recyclerview'
+    }
+    /*评分组件 https://github.com/DreaminginCodeZH/MaterialRatingBar*/
+    api  'me.zhanghai.android.materialratingbar:library:1.2.0'
+    /*点赞收藏按钮*/
+    compile 'com.ldoublem.thumbUplib:ThumbUplib:0.5'
+}

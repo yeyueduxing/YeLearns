@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.yeyue.library.widgets.percent.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.yeyue.library.widgets.percent.PercentLinearLayout
+                    android:id="@+id/panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:orientation="vertical"
+                    app:layout_marginPercent="3%w"
+                    app:layout_scrollFlags="scroll">
+
+                    <com.yeyue.library.widgets.percent.PercentRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_marginBottomPercent="3%w">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/avatar"
+                            app:layout_heightPercent="10%w"
+                            app:layout_widthPercent="10%w"
+                            tools:src="@mipmap/icon_diycode" />
+
+                        <TextView
+                            android:id="@+id/username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@+id/avatar"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/color_Main_Body"
+                            app:layout_textSizePercent="3%w"
+                            tools:text="diytest" />
+
+                        <TextView
+                            android:id="@+id/point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@+id/username"
+                            android:gravity="center_vertical"
+                            android:text="·"
+                            android:textColor="@color/color_Hint_Word"
+                            android:textStyle="bold"
+                            app:layout_textSizePercent="3%w" />
+
+                        <TextView
+                            android:id="@+id/node_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@+id/point"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/color_Hint_Word"
+                            app:layout_textSizePercent="3%w"
+                            tools:text="Android" />
+
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/color_Hint_Word"
+                            app:layout_textSizePercent="3%w"
+                            tools:text="1分钟前" />
+                    </com.yeyue.library.widgets.percent.PercentRelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="GcsTest(测试节点)"
+                        android:textColor="@color/color_Main_Body"
+                        android:textSize="20sp" />
+
+                    <FrameLayout
+                        android:id="@+id/webview_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title"
+                        android:layout_marginLeft="-12dp"
+                        android:layout_marginRight="-12dp"
+                        android:layout_marginTop="8dp">
+
+                    </FrameLayout>
+
+                    <ImageView
+                        android:id="@+id/collection"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/content"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginTop="12dp"
+                        android:padding="2dp"
+                        android:visibility="gone" />
+
+
+                    <ImageView
+                        android:id="@+id/like"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@+id/content"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="11dp"
+                        android:layout_toLeftOf="@+id/collection"
+                        android:padding="2dp"
+                        android:visibility="gone" />
+
+                </com.yeyue.library.widgets.percent.PercentLinearLayout>
+
+                <TextView
+                    android:id="@+id/reply_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/panel"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="8dp"
+                    android:text="共收到 0 条回复"
+                    android:textColor="@color/color_Hint_Word" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reply_count"
+                    android:fadingEdge="none" />
+
+                <View style="@style/YeLineStyle" />
+
+                <RelativeLayout
+                    android:id="@+id/need_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/login"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:text="登录" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/login"
+                        android:text="后可以评论!" />
+                </RelativeLayout>
+                <!--
+
+                                <RelativeLayout
+                                    android:id="@+id/can_reply"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="12dp"
+                                    android:visibility="visible">
+
+                                    <EditText
+                                        android:id="@+id/my_reply"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/topic_reply_bg"
+                                        android:gravity="start"
+                                        android:hint="评论内容"
+                                        android:minHeight="60dp"
+                                        android:padding="6dp"
+                                        android:textCursorDrawable="@null"
+                                        android:textSize="16sp"/>
+
+                                    <Button
+                                        android:layout_marginTop="12dp"
+                                        android:background="@drawable/topic_reply_btn_bg"
+                                        android:id="@+id/send_reply"
+                                        android:layout_width="80dp"
+                                        android:layout_height="36dp"
+                                        android:layout_alignParentRight="true"
+                                        android:textColor="@color/diy_white"
+                                        android:layout_below="@id/my_reply"
+                                        android:text="发送"/>
+                                </RelativeLayout>
+                -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp" />
+
+            </com.yeyue.library.widgets.percent.PercentLinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--提示字体颜色-->
+    <color name="color_Hint_Word">@color/ye_color_Hint_Word</color>
+    <!--正文字体颜色-->
+    <color name="color_Main_Body">@color/ye_color_Main_Word</color>
+
+    <color name="diy_red2">#cc6f6e</color>
+    <!--导航栏颜色-->
+    <color name="ye_color_Navigation_Base">#359499</color>
+    <color name="color_placeholder">#33929493</color>
+    <color name="color_errorPic">#dfd8a2</color>
+    <!--主题文字辅助色-->
+    <color name="ye_color_Hint_Word">#6e6d6d</color>
+
+
+    <!--推荐-->
+    <color name="color_Day_Recommend">#debb9f</color>
+
+</resources>

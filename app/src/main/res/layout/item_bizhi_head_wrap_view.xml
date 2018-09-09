@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.yeyue.learns.utils.BindingUtils" />
+        <import type="com.blankj.utilcode.util.TimeUtils"/>
+        <variable
+            name="user"
+            type="com.yeyue.learns.enity.bizhi.UserBean" />
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:onClick="@{(view) -> BindingUtils.openUserBean(view,user)}"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivHeader"
+            android:background="@android:color/transparent"
+            android:showImgBg="@{user.avatar}"
+            android:transitionName="head"
+            app:civ_border_color="@color/colorPrimary"
+            app:layout_heightPercent="10%w"
+            app:layout_widthPercent="10%w" />
+
+        <com.yeyue.library.widgets.percent.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            app:layout_marginLeftPercent="3%w">
+
+            <TextView
+                android:id="@+id/tvNickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:ellipsize="end"
+                android:text="@{user.name}"
+                android:textColor="@color/ye_color_Main_Word"
+                app:layout_textSizePercent="4%w" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text='@{TimeUtils.getFriendlyTimeSpanByNow(user.atime*1000)}'
+                android:textColor="@color/ye_color_Hint_Word"
+                app:layout_textSizePercent="5%w" />
+        </com.yeyue.library.widgets.percent.PercentLinearLayout>
+    </com.yeyue.library.widgets.percent.PercentLinearLayout>
+</layout>

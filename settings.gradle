@@ -1,0 +1,3 @@
+include ':app'
+include ':yeyue'
+project(':yeyue').projectDir = new File(settingsDir, "../YeLibrary/yeyue")

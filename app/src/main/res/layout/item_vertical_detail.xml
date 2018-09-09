@@ -1,0 +1,67 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="bizhi"
+            type="com.yeyue.learns.enity.bizhi.BizhiBean" />
+        <variable
+            name="user"
+            type="com.yeyue.learns.enity.bizhi.UserBean" />
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivCover"
+            android:layout_width="match_parent"
+            android:scaleType="fitCenter"
+            android:showImgBg="@{bizhi.img}"
+            app:layout_heightPercent="150%w" />
+
+        <com.yeyue.library.widgets.percent.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_marginPercent="2%w">
+
+            <TextView
+                android:id="@+id/tvZan"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="@{bizhi.rank}"
+                android:gravity="center"
+                tools:text="点赞"
+                android:textColor="@color/color_Hint_Word"
+                app:layout_textSizePercent="4%w" />
+            <TextView
+                android:id="@+id/tvCollect"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:text="@{bizhi.rank}"
+                tools:text="收藏"
+                android:textColor="@color/color_Hint_Word"
+                app:layout_textSizePercent="4%w" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="@{bizhi.rank}"
+                android:gravity="center"
+                tools:text="点赞"
+                android:textColor="@color/color_Hint_Word"
+                app:layout_textSizePercent="4%w" />
+        </com.yeyue.library.widgets.percent.PercentLinearLayout>
+
+    </com.yeyue.library.widgets.percent.PercentLinearLayout>
+</layout>

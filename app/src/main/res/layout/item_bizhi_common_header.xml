@@ -1,0 +1,48 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.yeyue.library.widgets.percent.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_marginTopPercent="4%w"
+            android:orientation="horizontal">
+            <View
+                android:id="@+id/vLeftDefault"
+                android:layout_width="5dp"
+                android:background="@drawable/shape_common_header_left_icon"
+                app:layout_heightPercent="6%w" />
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/comment_hot"
+                app:layout_marginLeftPercent="2%w"
+                app:layout_textSizePercent="4%w"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/tvDefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/vLeftDefault"
+                android:text="@{title}"
+                android:textColor="@color/color_Main_Body"
+                app:layout_marginLeftPercent="2%w"
+                app:layout_textSizePercent="4%w"
+                tools:text="热门" />
+
+        </com.yeyue.library.widgets.percent.PercentLinearLayout>
+
+    </com.yeyue.library.widgets.percent.PercentRelativeLayout>
+</layout>

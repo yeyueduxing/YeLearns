@@ -1,0 +1,96 @@
+<com.yeyue.library.widgets.percent.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.yeyue.library.widgets.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivCover"
+            android:src="@color/color_Hint_Word"
+            app:layout_heightPercent="17%w"
+            app:layout_marginPercent="5%w"
+            app:layout_widthPercent="17%w" />
+
+        <TextView
+            android:id="@+id/tvNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ivCover"
+            android:layout_toRightOf="@id/ivCover"
+            android:textColor="@color/color_Main_Body"
+            app:layout_textSizePercent="4%w"
+            tools:text="张三" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNickname"
+            android:layout_toRightOf="@id/ivCover"
+            android:textColor="@color/color_Hint_Word"
+            app:layout_marginTopPercent="2%w"
+            app:layout_textSizePercent="3%w"
+            tools:text="张三" />
+    </com.yeyue.library.widgets.percent.PercentRelativeLayout>
+
+    <com.yeyue.library.widgets.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivCover"
+        android:orientation="horizontal">
+
+        <com.yeyue.library.widgets.percent.PercentLinearLayout style="@style/UserDataLayout">
+
+            <TextView
+                android:id="@+id/tvRank"
+                style="@style/UserDataNum"
+                tools:text="1" />
+
+            <TextView
+                style="@style/UserDataDesc"
+                tools:text="活跃度" />
+        </com.yeyue.library.widgets.percent.PercentLinearLayout>
+
+        <com.yeyue.library.widgets.percent.PercentLinearLayout style="@style/UserDataLayout">
+
+            <TextView
+                android:id="@+id/tvVisit"
+                style="@style/UserDataNum"
+                tools:text="1" />
+
+            <TextView
+                style="@style/UserDataDesc"
+                tools:text="访问量" />
+        </com.yeyue.library.widgets.percent.PercentLinearLayout>
+
+        <com.yeyue.library.widgets.percent.PercentLinearLayout style="@style/UserDataLayout">
+
+            <TextView
+                android:id="@+id/tvFollowing"
+                style="@style/UserDataNum"
+                tools:text="1" />
+
+            <TextView
+                style="@style/UserDataDesc"
+                tools:text="我的关注" />
+        </com.yeyue.library.widgets.percent.PercentLinearLayout>
+
+        <com.yeyue.library.widgets.percent.PercentLinearLayout style="@style/UserDataLayout">
+
+            <TextView
+                android:id="@+id/tvFollower"
+                style="@style/UserDataNum"
+                tools:text="1" />
+
+            <TextView
+                style="@style/UserDataDesc"
+                tools:text="粉丝" />
+        </com.yeyue.library.widgets.percent.PercentLinearLayout>
+    </com.yeyue.library.widgets.percent.PercentLinearLayout>
+
+</com.yeyue.library.widgets.percent.PercentLinearLayout>

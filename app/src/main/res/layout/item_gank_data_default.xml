@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+        <import type="com.yeyue.learns.utils.TimeUtils"/>
+        <variable
+            name="gankdata"
+            type="com.yeyue.learns.enity.gank.GankData"/>
+        <import type="com.yeyue.learns.utils.BindingUtils"/>
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/transparent"
+        android:onClick="@{(view) -> BindingUtils.openGankData(view,gankdata)}">
+
+        <LinearLayout
+            android:id="@+id/ll_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="12dp">
+
+            <!--全部标签时显示福利图-->
+            <ImageView
+                android:id="@+id/iv_all_welfare"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_welfare_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_android_des"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="4dp"
+                    android:text="@{gankdata.desc}"
+                    android:textColor="@color/color_Main_Body"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_android_pic"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/tv_android_who"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='@{TextUtils.isEmpty(gankdata.who)?@string/no_name:gankdata.who}'
+                    android:textColor="@color/color_Hint_Word"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:background="@drawable/topic_node_name_bg"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_toRightOf="@id/tv_android_who"
+                    android:text="@{gankdata.type}"
+                    android:textColor="@color/diy_red2"
+                    app:layout_textSizePercent="3%w"
+                    android:onClick="@{(view) -> BindingUtils.openGankType(view,gankdata)}"
+                    tools:text="Android" />
+                <TextView
+                    android:id="@+id/tv_android_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text='@{TimeUtils.computePastTime(gankdata.publishedAt)}'
+                    android:textColor="@color/color_Hint_Word"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="6dp"
+                android:background="@color/transparent" />
+
+            <!--若不使用CardView则使用此分割线-->
+            <!--android:background="@color/colorLineItem"-->
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</layout>

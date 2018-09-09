@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yeyue.library.widgets.percent.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_empty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        app:layout_widthPercent="60%w"
+        app:layout_heightPercent="60%w"
+        android:src="@drawable/no_result"/>
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:text="数据为空"
+        android:visibility="gone"
+        android:textSize="18sp"/>
+</com.yeyue.library.widgets.percent.PercentLinearLayout>

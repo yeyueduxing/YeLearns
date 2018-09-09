@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yeyue.learns">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name="com.jess.arms.base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_title"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppTheme"
+        tools:replace="theme,label,allowBackup">
+        <activity
+            android:name=".ui.main.activity.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.main.activity.CommonFragmentActivity" />
+        <activity android:name=".ui.diycode.activity.DiyTopDetailActivity" />
+        <activity android:name=".ui.main.activity.SkinActivity" />
+        <activity android:name=".ui.main.activity.SearchActivity" />
+        <activity android:name=".ui.diycode.activity.DiyUserActivity" />
+        <activity android:name=".ui.wechat.activity.WeChataTagActivity" />
+        <activity android:name=".ui.gamersky.activity.GamerSkyWebActivity" />
+        <activity android:name=".ui.main.activity.SettingActivity" />
+        <activity android:name="com.yeyue.library.activity.YeLoadIndicatorActivty" />
+        <activity android:name=".ui.movie.activity.MovieDetailActivity"/>
+        <activity android:name=".ui.movie.activity.MovieCelebrityActivity"/>
+        <activity android:name=".ui.movie.activity.MovieFragmentActivity"/>
+        <activity android:name=".ui.movie.activity.MovieSearchActivity"/>
+        <activity android:name=".ui.bizhi.activity.BizhiDetailActivity"/>
+        <activity android:name=".ui.bizhi.activity.BizhiVideoDetailActivity"/>
+        <activity android:name=".ui.bizhi.activity.BizhiDayRecommendActivity"/>
+        <activity android:name=".ui.bizhi.activity.BizhiUserActivity"/>
+        <activity android:name=".ui.bizhi.activity.BizhiCategoryActivity"/>
+        <activity android:name=".ui.bizhi.activity.BizhiAlbumDetailActivity"/>
+        <meta-data
+            android:name="com.yeyue.learns.app.GlobalConfiguration"
+            android:value="ConfigModule" />
+
+    </application>
+
+</manifest>

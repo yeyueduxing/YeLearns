@@ -1,0 +1,62 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="image"
+            type="String"/>
+        <variable
+            name="album"
+            type="com.yeyue.learns.enity.bizhi.BizhiAlbumBean"/>
+        <import type="com.yeyue.learns.utils.BindingUtils"/>
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{(view) -> BindingUtils.openAlbumDetailActivity(view,album)}"
+    >
+        <com.yeyue.library.widgets.percent.PercentRelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:layout_marginTopPercent="1%w"
+            app:layout_marginRightPercent="3%w">
+            <ImageView
+                android:id="@+id/ivCover"
+                android:scaleType="fitCenter"
+                android:showImgBg="@{album.cover}"
+                android:visibility="visible"
+                app:layout_heightPercent="25%w"
+                app:layout_marginLeftPercent="1%w"
+                app:layout_widthPercent="25%w"/>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ivCover"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@{album.name}"
+                android:textColor="@color/color_Main_Body"
+                app:layout_marginLeftPercent="4%w"
+                app:layout_textSizePercent="4%w"
+                tools:text="独家青春旅社"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTitle"
+                android:layout_toRightOf="@id/ivCover"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@{album.desc}"
+                android:textColor="@color/color_Hint_Word"
+                app:layout_marginLeftPercent="4%w"
+                app:layout_marginTopPercent="1%w"
+                app:layout_textSizePercent="3%w"
+                tools:text="独家青春旅社"/>
+        </com.yeyue.library.widgets.percent.PercentRelativeLayout>
+
+    </com.yeyue.library.widgets.percent.PercentRelativeLayout>
+</layout>

@@ -1,0 +1,37 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "config.gradle"
+apply from: "../YeLibrary/YeLibrary.gradle"
+buildscript {
+    repositories {
+        jcenter()
+        google()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        /*数据库*/
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'//主要
+        classpath "com.tencent.bugly:tinker-support:1.1.1"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        google()
+        //Bmob的maven仓库地址--必填
+        maven { url "https://raw.github.com/bmob/bmob-android-sdk/master" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

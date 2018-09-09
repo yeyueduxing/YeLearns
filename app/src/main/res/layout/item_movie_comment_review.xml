@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <!--调用静态方法-->
+        <import type="com.yeyue.learns.utils.BindingUtils" />
+
+        <variable
+            name="commentReview"
+            type="com.yeyue.learns.enity.movie.MovieComment" />
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentLinearLayout
+        android:id="@+id/ll_one_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="left"
+        android:onClick="@{(view) -> BindingUtils.openMovieCommentReview(view,commentReview)}"
+        android:orientation="vertical">>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="@{commentReview.title}"
+            android:textColor="@color/color_Main_Body"
+            android:textStyle="bold"
+            app:layout_textSizePercent="6%w" />
+
+        <com.yeyue.library.widgets.percent.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@{commentReview.author.name}"
+                android:textColor="@color/color_Hint_Word"
+                android:onClick="@{(view) -> BindingUtils.openDouBanPeople(view,commentReview.author.id,commentReview.author.name)}"
+                app:layout_textSizePercent="4%w" />
+
+            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                style="@style/Widget.MaterialRatingBar.RatingBar"
+                android:layout_width="wrap_content"
+                android:numStars="@{commentReview.rating.max}"
+                android:rating="@{commentReview.rating.value}"
+                app:layout_heightPercent="5%w" />
+        </com.yeyue.library.widgets.percent.PercentLinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:text="@{commentReview.summary}"
+            android:textColor="@color/color_Hint_Word"
+            app:layout_textSizePercent="4%w" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text='@{commentReview.useful_count+"/"+commentReview.comments_count+" 有用"}'
+            android:textColor="@color/color_Hint_Word"
+            app:layout_textSizePercent="4%w" />
+    </com.yeyue.library.widgets.percent.PercentLinearLayout>
+</layout>

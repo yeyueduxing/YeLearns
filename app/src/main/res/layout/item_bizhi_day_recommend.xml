@@ -1,0 +1,69 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="dayTime"
+            type="String"/>
+        <variable
+            name="month"
+            type="String"/>
+        <variable
+            name="day"
+            type="com.yeyue.learns.enity.bizhi.DayRecommend" />
+        <import type="android.view.View"/>
+        <import type="com.yeyue.learns.utils.BindingUtils" />
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.yeyue.library.widgets.percent.PercentRelativeLayout style="@style/AppMargin"
+            app:layout_heightPercent="10%w">
+
+            <TextView
+                android:id="@+id/tvDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{dayTime}"
+                app:layout_textSizePercent="6%w"
+                android:textColor="@color/color_Day_Recommend"
+                android:layout_alignParentBottom="true"
+                tools:text="4" />
+            <TextView
+                android:id="@+id/tvMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tvDay"
+                android:text="@{month}"
+                app:layout_textSizePercent="5%w"
+                android:textColor="@color/color_Day_Recommend"
+                android:layout_alignParentBottom="true"
+                tools:text="4" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tvMonth"
+                app:layout_marginLeftPercent="5%w"
+                android:text="@{day.title}"
+                android:textColor="@color/color_Main_Body"
+                app:layout_textSizePercent="4%w"
+                android:layout_alignParentBottom="true"
+                tools:text="猥琐发育，别浪" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:onClick="@{(view) -> BindingUtils.openDayRecommendActivity(view)}"
+                android:text="更多>"
+                android:textColor="@color/color_Main_Body"
+                android:visibility="@{day.hasMore ? View.VISIBLE : View.GONE}"
+                app:layout_textSizePercent="4%w" />
+        </com.yeyue.library.widgets.percent.PercentRelativeLayout>
+
+    </com.yeyue.library.widgets.percent.PercentRelativeLayout>
+</layout>

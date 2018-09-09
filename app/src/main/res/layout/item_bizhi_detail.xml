@@ -1,0 +1,50 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="bizhi"
+            type="com.yeyue.learns.enity.bizhi.BizhiBean" />
+        <variable
+            name="user"
+            type="com.yeyue.learns.enity.bizhi.UserBean" />
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.yeyue.library.widgets.percent.PercentLinearLayout
+            style="@style/AppMargin"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:showImgBg="@{bizhi.img}"
+                app:layout_heightPercent="100%w" />
+
+            <com.yeyue.library.widgets.percent.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_marginPercent="2%w">
+
+                <TextView
+                    android:id="@+id/tvZan"
+                    style="@style/DetailFollow"
+                    tools:text="点赞" />
+                <TextView
+                    android:id="@+id/tvCollect"
+                    style="@style/DetailFollow"
+                    tools:text="收藏" />
+                <TextView
+                    style="@style/DetailFollow"
+                    tools:text="广告" />
+            </com.yeyue.library.widgets.percent.PercentLinearLayout>
+        </com.yeyue.library.widgets.percent.PercentLinearLayout>
+
+
+    </com.yeyue.library.widgets.percent.PercentLinearLayout>
+</layout>

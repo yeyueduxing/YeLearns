@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="wechattag"
+            type="com.yeyue.learns.enity.wechat.WeChatTag" />
+
+        <import type="com.yeyue.learns.utils.BindingUtils" />
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="@{wechattag.title}"
+            android:textColor="@color/color_Main_Body"
+            app:layout_heightPercent="12%w"
+            app:layout_marginLeftPercent="5%w"
+            app:layout_textSizePercent="4%w" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/swChange"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:checked="@{wechattag.check}"
+            app:layout_heightPercent="12%w"
+            app:layout_paddingPercent="2%w"
+            app:layout_widthPercent="15%w" />
+
+        <!--若不使用CardView则使用此分割线-->
+        <!--android:background="@color/colorLineItem"-->
+    </com.yeyue.library.widgets.percent.PercentRelativeLayout>
+
+
+</layout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <!--调用静态方法-->
+        <import type="com.yeyue.learns.utils.BindingUtils" />
+
+        <variable
+            name="beanCelebrity"
+            type="com.yeyue.learns.enity.movie.MovieBean" />
+    </data>
+
+
+    <com.yeyue.library.widgets.percent.PercentLinearLayout
+        android:id="@+id/ll_one_item"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:onClick="@{(view) -> BindingUtils.openMovieBean(view,beanCelebrity)}"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_one_photo"
+            android:scaleType="fitCenter"
+            android:showImgBg="@{beanCelebrity.images.large}"
+            app:layout_heightPercent="60%h"
+            app:layout_marginPercent="5%h"
+            app:layout_widthPercent="40%h" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="@{beanCelebrity.title}"
+            android:textColor="@color/color_Main_Body"
+            app:layout_textSizePercent="8%h"
+            app:layout_widthPercent="40%h" />
+
+        <com.yeyue.library.widgets.percent.PercentLinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_marginTopPercent="5%h"
+            app:layout_widthPercent="40%h">
+            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                style="@style/Widget.MaterialRatingBar.RatingBar"
+                android:layout_width="wrap_content"
+                android:numStars="5"
+                android:rating="@{beanCelebrity.rating.average/2}"
+                app:layout_heightPercent="14%w" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text='@{beanCelebrity.rating.average+""}'
+                android:textColor="@color/color_Hint_Word"
+                app:layout_textSizePercent="14%w" />
+        </com.yeyue.library.widgets.percent.PercentLinearLayout>
+
+    </com.yeyue.library.widgets.percent.PercentLinearLayout>
+</layout>

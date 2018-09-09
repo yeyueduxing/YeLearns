@@ -1,0 +1,29 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="image"
+            type="String"/>
+        <variable
+            name="bizhi"
+            type="com.yeyue.learns.enity.bizhi.BizhiBean"/>
+        <import type="com.yeyue.learns.utils.BindingUtils"/>
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:onClick="@{(view) -> BindingUtils.oepnBizhiDetail(view,bizhi,0)}"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            app:layout_heightPercent="100%w"
+            app:layout_marginPercent="2%w"
+            android:scaleType="fitCenter"
+            android:showImgBg="@{image}"
+        />
+    </com.yeyue.library.widgets.percent.PercentLinearLayout>
+</layout>

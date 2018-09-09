@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<group>
+        <item
+            app:ye_set_item_title="我的下载"
+            app:ye_set_item_drawable="@mipmap/user_local_manager"
+            />
+        <item
+            app:ye_set_item_title="我的消息"
+            app:ye_set_item_drawable="@mipmap/user_message_center"
+            />
+        <item
+            app:ye_set_item_title="我的关注"
+            app:ye_set_item_drawable="@mipmap/user_my_follow"
+            />
+    </group>
+    <group>
+        <item
+            app:ye_set_item_title="壁纸设置"
+            app:ye_set_item_drawable="@mipmap/user_set_wp"
+            />
+        <item
+            app:ye_set_item_title="其他设置"
+            app:ye_set_item_drawable="@mipmap/user_set_videowp"
+            />
+        <item
+            app:ye_set_item_title="反馈"
+            app:ye_set_item_drawable="@mipmap/user_fb"
+            />
+        <item
+            app:ye_set_item_title="换肤"
+            app:ye_set_item_drawable="@mipmap/user_set_other"
+            />
+    </group>-->
+</menu>

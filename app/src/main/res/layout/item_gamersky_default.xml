@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.text.TextUtils"/>
+        <import type="com.yeyue.learns.utils.TimeUtils"/>
+        <variable
+            name="gamer"
+            type="com.yeyue.learns.enity.gamersky.GamerSkyBean"/>
+        <import type="com.yeyue.learns.utils.BindingUtils"/>
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="@{(view) -> BindingUtils.openGamerSkyBean(view,gamer)}"
+        app:cardBackgroundColor="@color/transparent">
+
+        <com.yeyue.library.widgets.percent.PercentLinearLayout
+            android:id="@+id/ll_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_all_welfare"
+                android:scaleType="centerCrop"
+                android:showImgBg="@{gamer.thumb}"
+                app:layout_heightPercent="22%w"
+                app:layout_widthPercent="32%w"/>
+
+            <com.yeyue.library.widgets.percent.PercentRelativeLayout
+                android:id="@+id/ll_welfare_other"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layout_heightPercent="22%w"
+                app:layout_marginLeftPercent="2%w"
+                app:layout_marginRightPercent="2%w">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:lines="2"
+                    android:text="@{gamer.title}"
+                    android:textColor="@color/color_Main_Body"
+                    app:layout_textSizePercent="7%w"/>
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center_vertical"
+                    android:lines="1"
+                    android:text='@{gamer.updateTime+""}'
+                    android:textColor="@color/color_Hint_Word"
+                    app:layout_textSizePercent="4%w"
+                    app:layout_widthPercent="40%w"/>
+                <TextView
+                    android:id="@+id/tvComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical"
+                    android:lines="1"
+                    android:text='@{gamer.commentsCount+""}'
+                    android:textColor="@color/color_Hint_Word"
+                    app:layout_textSizePercent="4%w"/>
+            </com.yeyue.library.widgets.percent.PercentRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="6dp"
+                android:background="@color/transparent"/>
+
+            <!--若不使用CardView则使用此分割线-->
+            <!--android:background="@color/colorLineItem"-->
+        </com.yeyue.library.widgets.percent.PercentLinearLayout>
+    </android.support.v7.widget.CardView>
+
+</layout>

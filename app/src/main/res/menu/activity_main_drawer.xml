@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2017 GcsSloop
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  ~ Last modified 2017-03-08 01:01:18
+  ~
+  ~ GitHub:  https://github.com/GcsSloop
+  ~ Website: http://www.gcssloop.com
+  ~ Weibo:   http://weibo.com/GcsSloop
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="用户设置">
+        <item
+            android:id="@+id/nav_wan"
+            android:icon="@drawable/nav_app_icon_bizhi"
+            android:title="玩安卓"/>
+        <item
+            android:id="@+id/nav_diycode"
+            android:icon="@drawable/nav_app_icon_diycode"
+            android:title="DiyCode"/>
+        <item
+            android:id="@+id/nav_gank"
+            android:icon="@drawable/nav_app_icon_gank"
+            android:title="干货"/>
+        <item
+            android:id="@+id/nav_wechat"
+            android:icon="@drawable/nav_app_icon_wechat"
+            android:title="微信资讯"/>
+        <item
+            android:id="@+id/nav_gamerSky"
+            android:icon="@drawable/nav_app_icon_gamersky"
+            android:title="游明星空"/>
+        <item
+            android:id="@+id/nav_movie"
+            android:icon="@drawable/nav_app_icon_movie"
+            android:title="影视"/>
+        <item
+            android:id="@+id/nav_bizhi"
+            android:icon="@drawable/nav_app_icon_bizhi"
+            android:title="壁纸"/>
+    </item>
+
+    <item android:title="软件设置">
+        <menu>
+            <item
+                android:id="@+id/nav_skin"
+                android:icon="@drawable/nav_app_icon_skin"
+                android:title="换肤"/>
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/nav_app_icon_setting"
+                android:title="设置"/>
+        </menu>
+    </item>
+
+</menu>

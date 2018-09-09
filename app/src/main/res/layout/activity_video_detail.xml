@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background_imgv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:id="@+id/detail_top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/back_imgv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ye_app_icon_back"
+            android:text="back" />
+
+        <ImageView
+            android:id="@+id/setting_imgv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/vw_setting" />
+
+        <ImageView
+            android:id="@+id/voice_imagev"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/setting_imgv"
+            android:padding="2dp"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_toLeftOf="@id/voice_imagev"
+            android:layout_toRightOf="@id/back_imgv"
+            android:gravity="center"
+            android:shadowDx="1.0"
+            android:shadowDy="2.0"
+            android:shadowRadius="2.0"
+            android:text="白露为霜"
+            android:textColor="@color/ye_color_Navigation_Title"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/videoFrameLayout"
+        android:layout_width="225dp"
+        android:layout_height="400dp"
+        android:layout_below="@id/detail_top_rl"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center">
+
+        <VideoView
+            android:id="@+id/detail_videoview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:visibility="gone"
+            android:background="@color/transparent" />
+
+        <ImageView
+            android:id="@+id/videoImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:id="@+id/lw_progress"
+            android:layout_width="38dp"
+            android:layout_height="58dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/lw_progress_tv"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:shadowColor="@color/color_Main_Body"
+                android:shadowDx="2.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="2.0"
+                android:textColor="@color/color_Main_Body" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/videoPauseImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:src="@drawable/vw_video_start"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/set_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/videoFrameLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp">
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

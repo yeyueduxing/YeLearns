@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <!--调用静态方法-->
+        <import type="com.yeyue.learns.utils.BindingUtils" />
+
+        <variable
+            name="image"
+            type="com.yeyue.learns.enity.movie.MovieImage" />
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentLinearLayout
+        android:id="@+id/ll_one_item"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:onClick="@{(view) -> BindingUtils.openMovieImage(view,image)}"
+        android:orientation="vertical">>
+
+        <ImageView
+            android:id="@+id/iv_one_photo"
+            android:scaleType="fitCenter"
+            android:showImgBg="@{image.cover}"
+            app:layout_heightPercent="100%h"
+            app:layout_paddingPercent="5%h"
+            app:layout_widthPercent="130%h" />
+    </com.yeyue.library.widgets.percent.PercentLinearLayout>
+</layout>

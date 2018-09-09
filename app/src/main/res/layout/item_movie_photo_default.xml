@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="photo"
+            type="com.yeyue.learns.enity.movie.MoviePhotoRequest.PhotosBean" />
+
+        <import type="com.yeyue.learns.utils.BindingUtils" />
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentLinearLayout
+        android:id="@+id/ll_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_all_welfare"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:showImgBg="@{photo.cover}"
+            app:layout_heightPercent="100%w"
+            app:layout_marginPercent="2%w" />
+
+    </com.yeyue.library.widgets.percent.PercentLinearLayout>
+
+</layout>

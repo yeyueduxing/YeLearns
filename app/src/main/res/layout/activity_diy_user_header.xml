@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yeyue.library.widgets.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.yeyue.library.widgets.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        app:layout_heightPercent="70%w">
+
+        <ImageView
+            android:id="@+id/ivBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@color/transparent" />
+
+        <com.yeyue.library.widgets.percent.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivAvatar"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:src="@mipmap/icon_diycode"
+                app:layout_heightPercent="10%w"
+                app:layout_widthPercent="10%w" />
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="diytest(测试账号)"
+                android:textColor="@color/color_Main_Body"
+                app:layout_textSizePercent="5%w" />
+        </com.yeyue.library.widgets.percent.PercentLinearLayout>
+    </com.yeyue.library.widgets.percent.PercentRelativeLayout>
+
+
+</com.yeyue.library.widgets.percent.PercentRelativeLayout>
