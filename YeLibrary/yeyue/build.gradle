@@ -1,0 +1,102 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+
+
+    }
+    dataBinding {
+        enabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        abortOnError false
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion rootProject.ext.version["androidSupportSdkVersion"]
+            }
+        }
+    }
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    api rootProject.ext.dependencies["preference-v7"]
+    api rootProject.ext.dependencies["preference-v14"]
+    //tools
+    api rootProject.ext.dependencies["progressmanager"]
+    api rootProject.ext.dependencies["retrofit-url-manager"]
+    implementation rootProject.ext.dependencies["lifecyclemodel"]
+    implementation rootProject.ext.dependencies["paginate"]
+
+    //test
+    testImplementation rootProject.ext.dependencies["junit"]
+    debugApi rootProject.ext.dependencies["canary-debug"]
+    releaseApi rootProject.ext.dependencies["canary-release"]
+    testImplementation rootProject.ext.dependencies["canary-release"]
+
+    //compile project(':arms')
+    api  'me.jessyan:arms:2.3.5'
+    api  rootProject.ext.dependencies.multidex
+    /*Retrofit多个BaseUrl https://github.com/JessYanCoding/RetrofitUrlManager*/
+    implementation  'me.jessyan:retrofit-url-manager:1.1.0'
+    /*GIF展示框架*/
+    implementation  'pl.droidsonroids.gif:android-gif-drawable:1.2.7'
+    /*通用adapter https://github.com/CymChad/BaseRecyclerViewAdapterHelper*/
+    api  'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+    implementation  'com.android.support.constraint:constraint-layout:1.0.2'
+    /*轮播图框架 https://github.com/bingoogolapple/BGABanner-Android*/
+    api  'cn.bingoogolapple:bga-banner:2.1.7@aar'
+    /*通用工具类 https://github.com/Blankj/AndroidUtilCode/blob/master/README-CN.md*/
+    api  'com.blankj:utilcode:1.11.1'
+    //高斯模糊
+    api  'jp.wasabeef:glide-transformations:2.0.1'
+    /*状态栏控制 http://jaeger.itscoder.com/android/2016/03/27/statusbar-util.html*/
+    api  'com.jaeger.statusbarutil:library:1.4.0'
+    /*圆形图片 https://github.com/hdodenhof/CircleImageView*/
+    api  'de.hdodenhof:circleimageview:2.1.0'
+    /*QQ邮箱通用UI组件 http://qmuiteam.com/android/page/start.html*/
+    api  'com.qmuiteam:qmui:1.0.4'
+    /*通用加载布局 https://github.com/KingJA/LoadSir/blob/master/README-cn.md*/
+    api  'com.kingja.loadsir:loadsir:1.3.5'
+    /*腾讯BUgly https://bugly.qq.com/v2/index*/
+    api  'com.tencent.bugly:crashreport:2.6.6'
+    /*自定义换肤 https://github.com/ximsfei/Android-skin-support/blob/master/docs/cn/README.md*/
+    api  'skin.support:skin-support:2.2.2'                   // skin-support 基础控件支持
+    api  'skin.support:skin-support-design:2.2.2'            // skin-support-design material design 控件支持[可选]
+    api('skin.support:skin-support-cardview:2.2.2') { // skin-support-cardview CardView 控件支持[可选]
+        exclude module: 'com.android.support:recyclerview'
+    }
+    api  'skin.support:skin-support-constraint-layout:2.2.2' // skin-support-constraint-layout ConstraintLayout 控件支持[可选]
+
+    /*滑动关闭页面 https://github.com/bingoogolapple/BGASwipeBackLayout-Android*/
+    api  'cn.bingoogolapple:bga-swipebacklayout:1.1.8@aar'
+    api 'com.r0adkll:slidableactivity:2.0.5'
+    /*下载框架 https://github.com/lingochamp/FileDownloader/blob/master/README-zh.md*/
+    api  'com.liulishuo.filedownloader:library:1.6.9'
+    /*加载动画 https://github.com/zzz40500/android-shapeLoadingView*/
+    api  'com.wang.avi:library:2.1.3'
+
+}

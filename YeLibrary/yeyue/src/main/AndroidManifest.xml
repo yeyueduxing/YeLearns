@@ -1,0 +1,21 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    package="com.yeyue.library">
+
+    <application android:allowBackup="true" android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity android:name="com.yeyue.library.base.YeWebActivity" />
+        <activity android:name="com.yeyue.library.base.YeSkinDetailActivity" />
+        <!-- glide配置 -->
+        <meta-data
+            android:name="com.jess.arms.widget.imageloader.glide.GlideConfiguration"
+            android:value="GlideModule" />
+        <meta-data
+            android:name="com.yeyue.library.app.YeConfiguration"
+            android:value="ConfigModule" />
+        <activity
+            android:name="com.yeyue.library.widgets.viewbigimage.ViewBigImageActivity"
+            android:theme="@style/ViewBigPicTheme" />
+    </application>
+
+</manifest>

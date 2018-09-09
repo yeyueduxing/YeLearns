@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.preference.PreferenceCategory android:title="@string/YeConsTitle_System">
+
+        <android.support.v7.preference.Preference
+            android:key="@string/YeConsKey_LoadIndicator"
+            android:summary="@string/YeConsSummary_LoadIndicator"
+            android:title="@string/YeConsTitle_LoadIndicator"/>
+        <android.support.v7.preference.SeekBarPreference
+            android:defaultValue="1"
+            android:inputType="number"
+            android:key="@string/YeConsKey_NetRetryDelay"
+            android:max="10"
+            android:title="@string/YeConsTitle_NetRetryDelay"/>
+        <android.support.v7.preference.SeekBarPreference
+            android:defaultValue="1"
+            android:inputType="number"
+            android:key="@string/YeConsKey_NetRetryMax"
+            android:max="4"
+            android:title="@string/YeConsTitle_NetRetryMax"
+            />
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="@string/YeConsKey_ImageView"
+            android:summary="@string/YeConsSummary_ImageView"
+            android:title="@string/YeConsTitle_ImageView" />
+        <android.support.v7.preference.ListPreference
+            android:key="@string/YeConsKey_RecyAnimtion"
+            android:title="@string/YeConsTitle_RecyAnimtion"
+            android:summary="@string/YeConsSummary_RecyAnimtion"
+            android:entries="@array/YeConsArrRecyAnimtion"
+            android:entryValues="@array/YeConsArrRecyAnimtionValue"
+            android:dialogTitle="@string/YeConsTitle_RecyAnimtion"
+            android:defaultValue="1"
+            />
+    </android.support.v7.preference.PreferenceCategory>
+
+</android.support.v7.preference.PreferenceScreen>

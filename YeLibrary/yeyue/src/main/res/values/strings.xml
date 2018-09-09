@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">yeyue</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <!--应用常量设置-->
+    <string name="YeConsTitle_System">系统设置</string>
+
+    <string name="YeConsKey_RecyAnimtion">YeConsKey_RecyAnimtion</string>
+    <string name="YeConsTitle_RecyAnimtion">列表动画</string>
+    <string name="YeConsSummary_RecyAnimtion">列表的加载动画</string>
+
+    <string name="YeConsKey_ImageView">YeConsKey_ImageView</string>
+    <string name="YeConsTitle_ImageView">图片加载</string>
+    <string name="YeConsSummary_ImageView">只在WIFI下加载图片</string>
+
+    <string name="YeConsKey_NetRetryMax">YeConsKey_NetRetryMax</string>
+    <string name="YeConsTitle_NetRetryMax">网络请求错误重试次数</string>
+    <string name="YeConsSummary_NetRetryMax">网络请求错误重试次数</string>
+
+    <string name="YeConsKey_NetRetryDelay">YeConsKey_NetRetryDelay</string>
+    <string name="YeConsTitle_NetRetryDelay">网络请求间隔</string>
+    <string name="YeConsSummary_NetRetryDelay">网络请求间隔时间</string>
+
+    <string name="YeConsKey_LoadIndicator">YeConsKey_LoadIndicator</string>
+    <string name="YeConsTitle_LoadIndicator">加载动画</string>
+    <string name="YeConsSummary_LoadIndicator">加载动画</string>
+
+    <string name="YeConsKey_CacheSize">YeConsKey_CacheSize</string>
+    <string name="YeConsTitle_CacheSize">缓存</string>
+    <string name="YeConsSummary_CacheSize">缓存大小</string>
+</resources>

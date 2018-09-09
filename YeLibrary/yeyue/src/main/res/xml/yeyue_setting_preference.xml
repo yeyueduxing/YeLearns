@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        app:ye_set_group_title="网络">
+        <item
+            app:ye_set_item_title="Wifi"
+            app:ye_set_item_subTitle="没有wifi是否连接网络"
+            app:ye_set_item_checked="false"
+            app:ye_set_item_type="1"
+            />
+        <item
+            app:ye_set_item_title="图片"
+            app:ye_set_item_subTitle="没有wifi是否连接网络"
+            app:ye_set_item_checked="true"
+            app:ye_set_item_type="1"
+            />
+        <item
+            app:ye_set_item_title="图片1"
+            app:ye_set_item_subTitle="没有wi1fi是否连接网络"
+            app:ye_set_item_checked="true"
+            app:ye_set_item_type="0"
+            />
+        <item
+            app:ye_set_item_title="换肤"
+            app:ye_set_item_checked="true"
+            app:ye_set_item_type="0" />
+    </group>
+    <group
+        app:ye_set_group_title="网络">
+        <item
+            app:ye_set_item_title="Wifi"
+            app:ye_set_item_subTitle="没有wifi是否连接网络"
+            app:ye_set_item_checked="false"
+            app:ye_set_item_type="1"
+            />
+        <item
+            app:ye_set_item_title="图片"
+            app:ye_set_item_subTitle="没有wifi是否连接网络"
+            app:ye_set_item_checked="true"
+            app:ye_set_item_type="1"
+            />
+        <item
+            app:ye_set_item_title="图片1"
+            app:ye_set_item_subTitle="没有wi1fi是否连接网络"
+            app:ye_set_item_checked="true"
+            app:ye_set_item_type="0"
+            />
+        <item
+            app:ye_set_item_title="换肤"
+            app:ye_set_item_checked="true"
+            app:ye_set_item_type="0" />
+    </group>
+</menu>

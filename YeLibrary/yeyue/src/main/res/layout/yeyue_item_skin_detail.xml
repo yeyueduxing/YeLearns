@@ -1,0 +1,24 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="skin"
+            type="com.yeyue.library.data.YeSkinItem"/>
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:id="@+id/ivThumb"
+            android:layout_height="match_parent"
+            app:layout_widthPercent="60%h"
+            app:layout_marginPercent="1%h"
+            android:scaleType="fitCenter"
+        />
+    </com.yeyue.library.widgets.percent.PercentLinearLayout>
+</layout>

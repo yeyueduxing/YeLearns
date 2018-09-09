@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PercentLayout_Layout">
+        <attr name="layout_widthPercent" format="string"/>
+        <attr name="layout_heightPercent" format="string"/>
+
+        <attr name="layout_marginPercent" format="string"/>
+        <attr name="layout_marginLeftPercent" format="string"/>
+        <attr name="layout_marginTopPercent" format="string"/>
+        <attr name="layout_marginRightPercent" format="string"/>
+        <attr name="layout_marginBottomPercent" format="string"/>
+        <attr name="layout_marginStartPercent" format="string"/>
+        <attr name="layout_marginEndPercent" format="string"/>
+
+        <attr name="layout_textSizePercent" format="string"/>
+
+        <attr name="layout_maxWidthPercent" format="string"/>
+        <attr name="layout_maxHeightPercent" format="string"/>
+        <attr name="layout_minWidthPercent" format="string"/>
+        <attr name="layout_minHeightPercent" format="string"/>
+
+        <attr name="layout_paddingPercent" format="string"/>
+        <attr name="layout_paddingTopPercent" format="string"/>
+        <attr name="layout_paddingBottomPercent" format="string"/>
+        <attr name="layout_paddingLeftPercent" format="string"/>
+        <attr name="layout_paddingRightPercent" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="CircularProgressBar">
+        <attr name="cpbStyle" format="reference"/>
+        <attr name="cpb_color" format="color"/>
+        <attr name="cpb_colors" format="reference"/>
+        <attr name="cpb_stroke_width" format="dimension"/>
+        <attr name="cpb_min_sweep_angle" format="integer"/>
+        <attr name="cpb_max_sweep_angle" format="integer"/>
+        <attr name="cpb_sweep_speed" format="float"/>
+        <attr name="cpb_rotation_speed" format="float"/>
+    </declare-styleable>
+    <!--折叠文本-->
+    <declare-styleable name="ExpandableTextView">
+        <attr name="maxCollapsedLines" format="integer"/>
+        <attr name="animDuration" format="integer"/>
+        <attr name="animAlphaStart" format="float"/>
+        <attr name="expandDrawable" format="reference"/>
+        <attr name="collapseDrawable" format="reference"/>
+    </declare-styleable>
+    <!--标签文字-->
+    <declare-styleable name="TagFlowLayout">
+        <attr name="auto_select_effect" format="boolean"></attr>
+        <attr name="max_select" format="integer"></attr>
+        <attr name="gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+    <!--多选下拉赛选菜单-->
+    <declare-styleable name="DropDownMenu">
+
+        <attr name="ddunderlineColor" format="color"/>
+        <attr name="dddividerColor" format="color"/>
+        <attr name="ddtextSelectedColor" format="color"/>
+        <attr name="ddtextUnselectedColor" format="color"/>
+        <attr name="ddmenuBackgroundColor" format="color"/>
+        <attr name="ddmaskColor" format="color"/>
+        <attr name="ddmenuTextSize" format="dimension"/>
+        <attr name="ddmenuSelectedIcon" format="reference"/>
+        <attr name="ddmenuUnselectedIcon" format="reference"/>
+        <attr name="ddmenuMenuHeightPercent" format="float"/>
+    </declare-styleable>
+
+    <!--多标签-->
+    <declare-styleable name="TagGroup">
+        <attr name="atg_isAppendMode" format="boolean" />
+        <attr name="atg_inputHint" format="string" />
+
+        <attr name="atg_borderColor" format="color" />
+        <attr name="atg_textColor" format="color" />
+        <attr name="atg_backgroundColor" format="color" />
+
+        <attr name="atg_dashBorderColor" format="color" />
+        <attr name="atg_inputHintColor" format="color" />
+        <attr name="atg_inputTextColor" format="color" />
+
+        <attr name="atg_checkedBorderColor" format="color" />
+        <attr name="atg_checkedTextColor" format="color" />
+        <attr name="atg_checkedMarkerColor" format="color" />
+        <attr name="atg_checkedBackgroundColor" format="color" />
+        <attr name="atg_pressedBackgroundColor" format="color" />
+        <attr name="atg_borderStrokeWidth" format="dimension" />
+        <attr name="atg_textSize" format="dimension" />
+        <attr name="atg_horizontalSpacing" format="dimension" />
+        <attr name="atg_verticalSpacing" format="dimension" />
+        <attr name="atg_horizontalPadding" format="dimension" />
+        <attr name="atg_verticalPadding" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="Themes">
+        <attr name="tagGroupStyle" format="reference" />
+    </declare-styleable>
+
+    <!--设置头部-->
+    <declare-styleable name="YeSettingGroup">
+        <attr name="ye_set_group_title" format="string" />
+    </declare-styleable>
+    <declare-styleable name="YeSettingItem">
+        <attr name="ye_set_item_id" format="reference" />
+        <attr name="ye_set_item_title" format="string" />
+        <attr name="ye_set_item_subTitle" format="string" />
+        <attr name="ye_set_item_drawable" format="reference" />
+        <attr name="ye_set_item_arrow" format="reference" />
+        <attr name="ye_set_item_checked" format="boolean" />
+        <attr name="ye_set_item_synchor" format="boolean" />
+        <attr name="ye_set_item_key" format="string" />
+        <attr name="ye_set_item_type" format="integer"/>
+    </declare-styleable>
+</resources>

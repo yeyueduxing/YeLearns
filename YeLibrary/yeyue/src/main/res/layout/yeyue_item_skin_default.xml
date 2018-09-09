@@ -1,0 +1,47 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="skin"
+            type="com.yeyue.library.data.YeSkinItem" />
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.yeyue.library.widgets.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            app:layout_heightPercent="150%w">
+
+            <ImageView
+                android:id="@+id/ivThumb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:layout_marginPercent="2%w" />
+
+            <ImageView
+                android:id="@+id/ivSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ye_skin_complete_pressed"
+                android:visibility="gone" />
+        </com.yeyue.library.widgets.percent.PercentRelativeLayout>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/ye_color_Main_Word"
+            app:layout_textSizePercent="13%w" />
+    </com.yeyue.library.widgets.percent.PercentLinearLayout>
+</layout>

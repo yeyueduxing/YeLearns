@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="gplus_colors">
+        <item>@color/gplus_color_1</item>
+        <item>@color/gplus_color_2</item>
+        <item>@color/gplus_color_3</item>
+        <item>@color/gplus_color_4</item>
+    </integer-array>
+    <color name="gplus_color_1">#3e802f</color>
+    <color name="gplus_color_2">#f4b400</color>
+    <color name="gplus_color_3">#427fed</color>
+    <color name="gplus_color_4">#b23424</color>
+    <color name="colorAccent">#FF9800</color>
+    <color name="colorPrimary">#607D8B</color>
+    <color name="colorPrimaryDark">#455A64</color>
+    <color name="white">@android:color/white</color>
+    <color name="black">@android:color/black</color>
+    <color name="transparent">#00000000</color>
+    <color name="graw">#dcdada</color>
+
+    <color name="tv_btn_normal_black">#737373</color>
+    <color name="tv_btn_press_black">#adadad</color>
+
+    <!--导航栏颜色-->
+    <color name="ye_color_Navigation_Base">#00000000</color>
+    <!--顶部有视图的导航栏颜色-->
+    <color name="ye_color_Navigation_Header_Base">#00000000</color>
+    <!--项目内容颜色-->
+    <color name="ye_color_Bg_Base">#ffffff</color>
+    <!--底部Bottom颜色-->
+    <color name="ye_color_Bottom_Base">#00000000</color>
+    <!--底部Bottom文字默认颜色-->
+    <color name="ye_color_Bottom_Normal">#000000</color>
+    <!--底部Bottom文字选中颜色-->
+    <color name="ye_color_Bottom_Selector">#996262</color>
+
+    <!--导航栏标题颜色-->
+    <color name="ye_color_Navigation_Title">#000000</color>
+    <!--主题文字颜色-->
+    <color name="ye_color_Main_Word">#000000</color>
+    <!--主题文字辅助色-->
+    <color name="ye_color_Hint_Word">#333333</color>
+    <!--TabLayout文字正常颜色-->
+    <color name="ye_color_Tab_Normal">#000000</color>
+    <!--TabLayout文字选中颜色-->
+    <color name="ye_color_Tab_Select">#996262</color>
+
+    <!--按钮文字颜色-->
+    <color name="ye_color_Button_text">#ffffff</color>
+    <!--按钮正常颜色-->
+    <color name="ye_color_Button_bg_Normal">#2291e1</color>
+    <!--按钮按下选中颜色-->
+    <color name="ye_color_Button_bg_Select">#8f8e8e</color>
+
+    <!--侧滑栏默认字体和图标颜色-->
+    <color name="ye_color_NavigationView_Normal">#62646c</color>
+    <!--侧滑栏选中字体和图标颜色-->
+    <color name="ye_color_NavigationView_Select">#4e4b4b</color>
+    <!--设置-->
+
+    <!--半透明颜色层-->
+    <color name="ye_color_Set_Alpah_bg">#00000000</color>
+    <!--分割线颜色-->
+    <color name="ye_color_Driver">#22000000</color>
+    <!--分割线颜色-->
+    <color name="ye_color_Line">#44c4c2c2</color>
+
+</resources>

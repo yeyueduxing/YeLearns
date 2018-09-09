@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_load_more_progress_size">30dp</dimen>
+    <dimen name="common_load_more_padding">20dp</dimen>
+    <dimen name="common_loading_progress_size">35dp</dimen>
+    <dimen name="common_loading_text_margin">10dp</dimen>
+    <dimen name="common_loading_text_lines_spacing">5dp</dimen>
+
+    <dimen name="mirror_ref_height">5dp</dimen>
+
+    <!--common-->
+    <dimen name="radius">5dp</dimen>
+    <dimen name="text_size_24">24dp</dimen>
+    <dimen name="text_size_18">18dp</dimen>
+    <dimen name="text_size_16">16dp</dimen>
+    <dimen name="text_size_14">14dp</dimen>
+    <dimen name="text_size_13">13dp</dimen>
+    <dimen name="text_size_12">12dp</dimen>
+
+    <!--widget-->
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+
+
+    <!-- stateLayout -->
+    <dimen name="stfProgressSize">60dp</dimen>
+    <dimen name="stfImageSize">80dp</dimen>
+
+    <!--app-->
+    <dimen name="toolbar_ic_size">33dp</dimen>
+    <dimen name="app_margin_8">8dp</dimen>
+    <dimen name="app_margin_12">12dp</dimen>
+    <dimen name="app_margin_16">16dp</dimen>
+    <dimen name="app_margin_24">24dp</dimen>
+    <dimen name="app_margin_32">32dp</dimen>
+    <dimen name="app_default_border">@dimen/app_margin_16</dimen>
+
+    <!--ToolBar的高度-->
+    <dimen name="ye_Toolbar_height">48dp</dimen>
+    <dimen name="ye_Toolbar_Nav_height">15dp</dimen>
+</resources>

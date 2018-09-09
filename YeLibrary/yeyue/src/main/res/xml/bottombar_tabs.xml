@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_recents"
+        android:icon="@drawable/ic_add"
+        android:title="Recents" />
+    <item
+        android:id="@+id/tab_favorites"
+        android:icon="@drawable/ic_add"
+        android:title="Favorites" />
+</menu>

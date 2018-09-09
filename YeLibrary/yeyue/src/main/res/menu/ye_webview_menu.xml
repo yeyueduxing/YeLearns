@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/ye_actionbar_share"
+        android:orderInCategory="100"
+        android:title="分享到"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/ye_actionbar_cope"
+        android:orderInCategory="100"
+        android:title="复制链接"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/ye_actionbar_open"
+        android:orderInCategory="100"
+        android:title="打开链接"
+        app:showAsAction="never" />
+</menu>

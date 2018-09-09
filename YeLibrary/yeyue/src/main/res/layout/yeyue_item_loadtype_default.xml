@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2017 GcsSloop
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  ~ Last modified 2017-03-08 01:01:18
+  ~
+  ~ GitHub:  https://github.com/GcsSloop
+  ~ Website: http://www.gcssloop.com
+  ~ Weibo:   http://weibo.com/GcsSloop
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="Loadtype"
+            type="com.yeyue.library.data.YeLoadtype" />
+
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avLoad"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            app:layout_paddingPercent="10%w"
+            app:indicatorColor="@color/ye_color_Main_Word"
+            app:indicatorName="BallPulseIndicator"
+            app:layout_heightPercent="100%w" />
+    </com.yeyue.library.widgets.percent.PercentLinearLayout>
+</layout>

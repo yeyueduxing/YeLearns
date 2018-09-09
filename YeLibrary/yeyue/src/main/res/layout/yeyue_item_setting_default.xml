@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.text.TextUtils"/>
+        <import type="android.view.View"/>
+        <variable
+            name="setting"
+            type="com.yeyue.library.data.YeSettingItem"/>
+    </data>
+
+    <com.yeyue.library.widgets.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ye_color_Set_Alpah_bg"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/line"
+            style="@style/YeLineStyle"
+            android:visibility="gone" />
+        <com.yeyue.library.widgets.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            app:layout_heightPercent="14%w"
+            app:layout_marginLeftPercent="4%w"
+            app:layout_marginRightPercent="4%w">
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                app:layout_heightPercent="5.5%w"
+                app:layout_widthPercent="5.5%w"
+                app:layout_marginRightPercent="2%w"
+                android:visibility="gone"
+                />
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/swChange"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:layout_widthPercent="120%h"
+                app:layout_heightPercent="70%h"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivIcon"
+                android:textColor="@color/ye_color_Main_Word"
+                app:layout_textSizePercent="4.5%w"/>
+            <TextView
+                android:id="@+id/tvSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivIcon"
+                android:layout_below="@id/tvTitle"
+                android:textColor="@color/ye_color_Main_Word"
+                app:layout_textSizePercent="3%w" />
+        </com.yeyue.library.widgets.percent.PercentRelativeLayout>
+
+    </com.yeyue.library.widgets.percent.PercentLinearLayout>
+</layout>

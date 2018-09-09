@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <!--播放全屏视频时用-->
+    <FrameLayout
+        android:id="@+id/ye_video_fullView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+    <WebView
+        android:id="@+id/ye_base_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
+
+    <ProgressBar
+        android:id="@+id/ye_webview_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignParentTop="true"
+        android:max="1000"
+        android:progress="0"
+        android:progressDrawable="@drawable/ye_webview_process_bg"
+        android:visibility="gone" />
+
+</RelativeLayout>

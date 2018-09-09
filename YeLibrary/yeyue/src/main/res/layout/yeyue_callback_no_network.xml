@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yeyue.library.widgets.percent.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_empty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ye_no_network"
+        app:layout_heightPercent="50%w"
+        app:layout_marginTopPercent="10%w"
+        app:layout_widthPercent="35%w" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="网络不给力啦!"
+        android:textColor="@color/ye_color_Main_Word"
+        android:textSize="18sp"
+        app:layout_textSizePercent="4.5%w" />
+
+    <View
+        style="@style/YeLineStyle"
+        app:layout_marginTopPercent="2%w"
+        app:layout_widthPercent="35%w" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="left"
+        android:text="请检查你的手机\n• WIFI稳定连接\n• 2G/3G信号稳定"
+        android:textColor="@color/ye_color_Hint_Word"
+        app:layout_marginTopPercent="2%w"
+        app:layout_textSizePercent="3.5%w"
+        app:layout_widthPercent="40%w" />
+
+    <com.yeyue.library.widgets.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_marginTopPercent="5%w">
+
+        <Button
+            android:id="@+id/btSetting"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ye_selector_skin_button_download"
+            android:text="设置"
+            android:textColor="@color/ye_color_Button_text"
+            app:layout_marginRightPercent="5%w"
+            app:layout_widthPercent="30%w" />
+
+        <Button
+            android:id="@+id/btRefresh"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ye_selector_skin_button_download"
+            android:text="刷新"
+            android:textColor="@color/ye_color_Button_text"
+            app:layout_marginLeftPercent="5%w"
+            app:layout_widthPercent="30%w" />
+    </com.yeyue.library.widgets.percent.PercentLinearLayout>
+</com.yeyue.library.widgets.percent.PercentLinearLayout>

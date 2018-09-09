@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yeyue.library.widgets.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_loading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avLoad"
+        android:visibility="visible"
+        app:indicatorColor="@color/ye_color_Main_Word"
+        app:indicatorName="BallPulseIndicator"
+        app:layout_heightPercent="15%w"
+        app:layout_widthPercent="15%w" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/avLoad"
+        android:text="加载中"
+        android:textColor="@color/ye_color_Main_Word"
+        app:layout_textSizePercent="4%w" />
+</com.yeyue.library.widgets.percent.PercentRelativeLayout>
