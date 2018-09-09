@@ -1,66 +1,101 @@
 ###夜月咨询
 
+夜月：一款符合Google Material Design的Android客户端。项目使用MVPArms作为底层框架，然后自己扩展了一个UI框架YeLibrary，实现了各种常用的列表页，Tab页等等，便于快速开发应用。现主要包括：玩安卓，DIYcode，干货，微信资讯，游明星空，影视，壁纸等多个模块。
 
-一款基于Google Material Design设计开发的壁纸客户端，仿照 "安卓壁纸",包括首页壁纸推荐，竖屏壁纸，视频壁纸，壁纸搜索，换肤等功能。项目采取的是MVP架构开发，使用的是[MVPArms](https://github.com/JessYanCoding/MVPArms)底层框架，然后自己自定义了一些通用UI层。
-* 通用列表Activity和Fragment
-* 通用底部boombar
-* 通用TabLayout
-* 通用
-
-###效果图
-<img src="https://github.com/yeyueduxing/BiZhi/blob/master/Bizhi/Images/2.jpg?raw=true" width="20%" height="20%"><img src="https://github.com/yeyueduxing/BiZhi/blob/master/Bizhi/Images/3.jpg?raw=true" width="20%" height="20%"><img src="https://github.com/yeyueduxing/BiZhi/blob/master/Bizhi/Images/4.jpg?raw=true" width="20%" height="20%"><img src="https://github.com/yeyueduxing/BiZhi/blob/master/Bizhi/Images/5.jpg?raw=true" width="20%" height="20%"><img src="https://github.com/yeyueduxing/BiZhi/blob/master/Bizhi/Images/6.jpg?raw=true" width="20%" height="20%"><img src="https://github.com/yeyueduxing/BiZhi/blob/master/Bizhi/Images/7.jpg?raw=true" width="20%" height="20%"><img src="https://github.com/yeyueduxing/BiZhi/blob/master/Bizhi/Images/8.jpg?raw=true" width="20%" height="20%"><img src="https://github.com/yeyueduxing/BiZhi/blob/master/Bizhi/Images/9.jpg?raw=true" width="20%" height="20%"><img src="https://github.com/yeyueduxing/BiZhi/blob/master/Bizhi/Images/10.jpg?raw=true" width="20%" height="20%"><img src="https://github.com/yeyueduxing/BiZhi/blob/master/Bizhi/Images/11.jpg?raw=true" width="20%" height="20%"><img src="https://github.com/yeyueduxing/BiZhi/blob/master/Bizhi/Images/12.jpg?raw=true" width="20%" height="20%"><img src="https://github.com/yeyueduxing/BiZhi/blob/master/Bizhi/Images/13.jpg?raw=true" width="20%" height="20%">
 
 ###模块分析
 
-####壁纸展示
+####玩安卓
 
-* 介绍：API使用的是安卓壁纸客户端的接口，如有侵权请及时告知。
+* 介绍：来源是鸿洋的网站http://www.wanandroid.com/article 接口，如有侵权请及时告知，我将及时删除。
 
-* 功能：列表页使用自定义的ListView(自动加载更多）显示新闻列表，详情使用的是WebView加载，支持滑动返回。对于多图
-新闻的处理，使用的和主流新闻客户端类似，滑动切换多张图片，可双指缩放图片大小！
+* 功能：首页列表数据和首页banner
+* 
+<img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(1).png" width="20%" height="20%">
 
-####图片浏览
+####DiyCode
 
-* 介绍：API使用的是百度图片的搜索接口，由于网上有很多的开发者开源了这个接口，所以我也就放出来，如有侵权请及时告知。
+* 介绍：DiyCode是一个开发工程师高端交流分享社区，接口是网站开放出来的，如有侵权请及时告知，我将及时删除。
 
-* 功能：列表页使用的瀑布流效果（增加了下拉刷新和上拉加载更多）详情页和列表页的切换增加了一个图片放大或缩小到指定位置的效果，图片也可以双指缩放！
+* 功能：主要展示话题列表，话题分类，文章列表和常用站点
+* 
+<img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(3).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(4).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(5).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(6).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(7).png" width="20%" height="20%">
 
-####视频爽看
+####干货
 
-* 介绍：API使用的是优酷开放平台的SDK，不过要吐槽的一点是，优酷的SDK真心不好用，还是Eclipse版本的，我是一点点移植到Android Studio平台的，但是它的接口还是很丰富的，好好的利用一下，还是能够做出一个优秀的APP的。
+* 介绍：作为一个程序员，干货这个站点大家都懂的吧。当然像我使用这个接口肯定是为了获取技术文章的，妹子图什么的我就随便保存了几十张而已的。
 
-* 功能：列表页使用了Google的CardView，简单的获取了一些视频的基本数据。播放页使用了优酷提供的视频播放器组件，传入视频ID就可以播放视频了，只要调通了SDK，其他的都是一些简单的数据获取！
+* 功能：干货站点的文章列表，文章分类，福利图，还要根据日期获取文章。
+* 
+<img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(8).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(9).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(10).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(11).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(12).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(13).png" width="20%" height="20%">
 
-####音乐轻听
+####微信资讯
 
-* 介绍：API获取的是豆瓣音乐的数据，由于也不是开放API，如有侵权请及时告知。
+* 介绍：这边使用的是一个开放接口，需要自己注册账号申请key值，主要是各种微信文章，资讯之类的。。
 
-* 功能：播放音乐的界面是我自定义的一个唱机的View，很多思路都是从网上学习借鉴过来的，自己重新造了个轮子。UI和网易云音乐对比的话，只能说是形似神不似了，没有人家做的细致！
+* 功能：主要展示推荐文章还要根据自己筛选文章分类，用的是BaseRecyclerViewAdapterHelper的添加拖拽功能
+* 
+<img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(14).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(15).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(16).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(17).png" width="20%" height="20%">
 
-####二维码扫描
+####游明星空
 
-* 介绍：这个完全是我自己单独开发的类库，之前也有开源出来，这次又再一次重构优化，后期会单独剥离二维码扫描模块，做成类库和Demo的形式，提供Android Studio版本。
+* 介绍：以前经常在游明星空看动态趣图，小编果然个个都是人才。接口是使用浏览器查看请求获取的，如有侵权请及时告知，我将及时删除。
 
-* 功能：扫描界面使用xml进行布局，然后加入属性动画。这样布局更具有优势，更利于多屏幕适配。解码模块使用的是两个主流的开源库Zbar和ZXing，进过多次测试发现，ZBar虽然扫描效率和速度高于ZXing，但是经常扫描出错误的信息，可能由于太灵敏的缘故把，综合二者的优缺点还是建议使用ZXing来解码，并且这个项目还在长期维护更新！
+* 功能：主要展示了游明星空十几个分类模块，每个分类模块有轮播图和列表页，点击详情是使用webview加载网页展示的！
+* 
+<img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(18).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(19).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(20).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(21).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(22).png" width="20%" height="20%">
+####影视
+
+* 介绍：接口使用的是豆瓣开放影视API，如有侵权请及时告知，我将及时删除。
+
+* 功能：主要展示了影视的正在上映，即将上映，电影详情，电影剧照，电影角色，短评，影评等！
+* 
+<img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(23).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(24).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(25).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(26).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(27).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(28).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(29).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(30).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(31).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(32).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(33).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(34).png" width="20%" height="20%">
+####壁纸
+
+* 介绍：壁纸主要是通过抓包的方式，仿照 “安卓壁纸”进行开放的，接口都是抓包获取，请不要用于商业用途，如有侵权请及时告知，我将及时删除。
+
+* 功能：壁纸模块是花了最多精力的，里面功能也是非常丰富，首页推荐，横竖屏壁纸，视频壁纸，每个模块分类，每日精选，壁纸搜索等等大部分模块都是开放了。该功能仅供参考，不得用于商业用途！
+* 
+<img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(35).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(36).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(37).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(38).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(39).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(40).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(41).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(42).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(43).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(44).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(45).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(46).png" width="20%" height="20%">
+
+####换肤
+* 介绍：应用里面包含了一个通用的换肤功能，可以实时更换整个应用的皮肤
+
+* 功能：换肤使用的Android-skin-support，功能非常强大
+* 
+<img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(47).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(48).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(49).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(50).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(51).png" width="20%" height="20%">
+
+####设置
+* 介绍：设置功能也是使用一个通用的设置模块，可以自定义列表加载动画，和界面Loading动画
+
+* 功能：自定义列表加载动画，和界面Loading动画
+* 
+<img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(52).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(53).png" width="20%" height="20%"><img src="https://raw.githubusercontent.com/yeyueduxing/pubimages/master/learns/1%20(54).png" width="20%" height="20%">
+
 
 ###致谢
 
-* 苦于没有后台支持，找到这些支持JSON数据格式的开放接口可谓是煞费苦心，前前后后尝试了很多次才找到，也感谢网友们提供的接口！
+* 非常感谢MVPArms的作者，其实这个项目已经足够进行一个快速应用开发了，只是没有UI框架，所以我在这个的基础上添加了常用的各种界面。基本如果接口调好，切图也有了开发一个完整的应用几天就够，而且整体的代码看起来也是非常清晰的！
 
-* 界面的原型都是我自己构思的，后期的切图美化主要是Chris帮忙完成的，很感谢他业余时间和我一起完成这样一个APP！
+* 其实这里面已经把依赖库抽取出来了，下次专门把为依赖库创建一个项目。而且还有另一个仿照追书神器的应用，也是使用这个依赖库开发的。
 
-* 项目中大量使用了Github上面优秀的开源项目，我会列举出来！其他一些代码片段就不一一致谢了，很感谢这些开放源码的技术大牛们，让我学到了很多！
-
-* 最后如果觉得我的项目对你有所帮助，请点击我的支付宝付款码请我喝杯咖啡把~当然我也希望你们能够多多**fork**，多多**star**，多多**follow**，这将给我更多的动力开源更多的项目！
+* 最后如果觉得我的项目对你有所帮助，希望你们能够多多**fork**，多多**star**，多多**follow**，这将给我更多的动力开源更多的项目！
 
 ###开源项目说明
 
-> **ButterKnife**
+> **[MVPArms](https://github.com/JessYanCoding/MVPArms)**
+> **[BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)**
+> **[Bga-Banner](https://github.com/bingoogolapple/BGABanner-Android)**
+> **[AndroidUtilCode](https://github.com/Blankj/AndroidUtilCode)**
+> **[StatusBarUtil](https://github.com/laobie/StatusBarUtil)**
+> **[Android-skin-support](https://github.com/ximsfei/Android-skin-support/)**
+> **[LoadSir](https://github.com/KingJA/LoadSir)**
+> **[BGASwipeBackLayout-Android](https://github.com/bingoogolapple/BGASwipeBackLayout-Android)**
 
-* **Link:** [https://github.com/JakeWharton/butterknife](https://github.com/JakeWharton/butterknife)
 
-* **License:** `Licensed under the Apache License, Version 2.0 (the "License");`
 
 ###关于我
 
-* **QQ:** 1076559197
+* **QQ:** 805900605
+
